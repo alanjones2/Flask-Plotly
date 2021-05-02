@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <style type="text/css">
+        .header{
+            text-align: center;
+            background-color: rgb(136, 185, 229);
+            height: 70px;
+            line-height: 70px;
+        }
+        .chart{
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h2>
+            Plotly Chart Demo
+        </h2>
+    </div>
+
+    <div id="chart" class="chart">
+
+    </div>
+
+</body>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript">
+        
+        var graphs = {{graphJSON | safe}};
+       
+        Plotly.plot('chart',graphs,{});        
+
+    </script>
+
+</html>
