@@ -1,2 +1,2 @@
 # test
-![alt text](Untitled drawing.png "image")
+![alt text](/docs/drawing.png "image")
