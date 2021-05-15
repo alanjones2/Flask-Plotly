@@ -7,7 +7,7 @@ status: draft
 
 
 # test
-![image](img/drawing.png)
+![image](https://raw.githubusercontent.com/alanjones2/Flask-Plotly/main/docs/img/drawing.png)
 
 some text
 
