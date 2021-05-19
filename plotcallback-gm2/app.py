@@ -22,17 +22,3 @@ def gm(country='United Kingdom'):
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON
 
-"""
-                tweetData.plot.bar(subplots=True, figsize=(10,6),y=['favorite_count','retweet_count'], label=['Likes','Retweets'],title=(rvals['name'],''))
-
-            from io import BytesIO
-            fig = BytesIO()
-            plt.savefig(fig, format='png')
-            fig.seek(0)  # rewind to beginning of file
-            import base64
-            #figdata_png = base64.b64encode(figfile.read())
-            rvals['fig'] = base64.b64encode(fig.getvalue())
-
-            return render_template('tsindex.html', result=fig.decode('utf8'))
-
-"""
