@@ -13,6 +13,10 @@ This article explores using Flask and Plotly as an alternative to using Dash whe
 This article shows how to create a truly interactive app as you might with Dash with callbacks but using Plotly and Flask and a bit of AJAX. The code for this is in 
 [plotlycallback-gm](https://github.com/alanjones2/Flask-Plotly/tree/main/plotlycallback-gm).
 
+A slightly modified version of the code above can be found here:
+[plotlycallback-gm2](https://github.com/alanjones2/Flask-Plotly/tree/main/plotlycallback-gm2). In this version no parameters are passed to the template and the chart is always loaded using Ajax. It also has the benefit of labelling the chart! 
+
+
 <hr/>
 
 This is the first stage in a development of **FlaPjax** a virtual framework for creating data visualizations with **Fla**sk, **P**lotly and A**jax**. 
