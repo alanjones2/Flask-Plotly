@@ -23,8 +23,7 @@ This is the first stage in a development of **FlaPjax** a virtual framework for 
 
 To get all of the code either clone this repo or [download the zip file](https://github.com/alanjones2/Flask-Plotly/archive/refs/heads/main.zip)
 
-If you have found this content useful, please consider this...
-<br/>
-<a href='https://ko-fi.com/M4M64THKG' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+If you have found this content useful, please consider this... <br/><br/>
+<a href='https://ko-fi.com/M4M64THKG' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> </td>
 
 __*Please note that all the software in this repo is written for educational purposes and should not be considered suitable for production code*__
