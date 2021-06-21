@@ -17,7 +17,7 @@ def index():
 @app.route('/callback/<endpoint>')
 def cb(endpoint):   
     if endpoint == "getStock":
-        return gm(request.args.get('data'))
+        return gm(request.args.get('data'),request.args.get('period'),request.args.get('interval'))
     elif endpoint == "getInfo":
         stock = request.args.get('data')
         st = yf.Ticker(stock)
@@ -27,14 +27,14 @@ def cb(endpoint):
         return "Bad endpoint", 400
 
 # Return the JSON data for the Plotly graph
-def gm(stock):
+def gm(stock,period, interval):
     st = yf.Ticker(stock)
   
     # Create a line graph
-    df = st.history(period=("1d"), interval="1m")
+    df = st.history(period=(period), interval=interval)
     df=df.reset_index()
     df.columns = ['Date-Time']+list(df.columns[1:])
-
+    print(df.head())
     max = (df['Open'].max())
     min = (df['Open'].min())
     range = max - min
