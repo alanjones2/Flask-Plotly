@@ -11,22 +11,19 @@
   <title></title>
 
   <script>
-    // Globals
-    Stock = "MSFT";
-    Period = "1y";
-    Interval = "1h";
 
     async function callback() {
-
-      data=Stock;
-
-      alert(Stock+Period+Interval);
-      return;
-      let response = await fetch("/callback/getStock?data="+data+"&period="+Period+"&interval="+Interval);
+    
+      let Stock=document.getElementById('stock').value;
+      let Period=document.getElementById('period').value;
+      let Interval=document.getElementById('interval').value;
+      //alert(Stock+Period+Interval);
+      //return;
+      let response = await fetch("/callback/getStock?data="+Stock+"&period="+Period+"&interval="+Interval);
       if (response.ok) {
         let chartJson = await response.json();
         if (response.ok) {
-          response = await fetch("/callback/getInfo?data=" + data);
+          response = await fetch("/callback/getInfo?data=" + Stock);
           let infoJson = await response.json();
           info(infoJson);
           Plotly.newPlot('chart', chartJson, {});
@@ -55,7 +52,7 @@
     <div class="row">
       <div class="col-6 col-sm-1"><b>Select stock</b></div>
       <div class="col-6 col-sm-2">
-        <select class="form-select" aria-label="Select" oninput="Stock=this.value" )>
+        <select id="stock" class="form-select" aria-label="Select" )>
           <option selected value="MSFT">Microsoft</option>
           <option value="FB">Facebook</option>
           <option value=AAPL>Apple</option>
@@ -65,7 +62,7 @@
       <div class="col-6 col-sm-1"><b>for period</b></div>
 
       <div class="col-6 col-sm-2">
-        <select class="form-select" aria-label="Select" oninput="Period = this.value" )>
+        <select id="period" class="form-select" aria-label="Select" )>
           <option selected value="1d">1 day</option>
           <option value="5d">5 days</option>
           <option value="1mo">1 month</option>
@@ -81,7 +78,7 @@
       </div><div class="col-6 col-sm-1"><b>Interval</b></div>
 
       <div class="col-6 col-sm-2">
-        <select class="form-select" aria-label="Select" oninput="Interval = this.value" )>
+        <select id="interval" class="form-select" aria-label="Select" )>
           <option selected value="1m">1 minute</option>
           <option value="2m">2 minutes</option>
           <option value="5m">5 minutes</option>
