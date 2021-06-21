@@ -33,6 +33,7 @@ def gm(stock):
     # Create a line graph
     df = st.history(period=("1d"), interval="1m")
     df=df.reset_index()
+    df.columns = ['Date-Time']+list(df.columns[1:])
 
     max = (df['Open'].max())
     min = (df['Open'].min())
