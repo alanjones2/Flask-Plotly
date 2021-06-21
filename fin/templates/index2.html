@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <title></title>
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script>
+    // Globals
+    Stock = "MSFT";
+    Perion = "1y";
+
+    async function callback() {
+      data = Stock;
+      let response = await fetch("/callback/getStock?data=" + data);
+      if (response.ok) {
+        let json = await response.json();
+        if (response.ok) {
+          response = await fetch("/callback/getInfo?data=" + data);
+          json = await response.json();
+          info(json);
+          Plotly.newPlot('chart', json, {});
+        } else {
+          alert("HTTP-Error: " + response.status + "on getInfo");
+        }
+      } else {
+        alert("HTTP-Error: " + response.status + "on getStock");
+      }
+    }
+    function info(json) {
+      let name = document.getElementById('companyName');
+      name.innerHTML = json.shortName;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-3 col-sm-12 text-light bg-dark" style="margin:20px 0px 20px 0px">
+        <h1 style="padding:20px 0px 20px 0px">Stock movements</h1>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-6 col-sm-3"><b>Select stock</b></div>
+      <div class="col-6 col-sm-3">
+        <select class="form-select" aria-label="Select" oninput="Stock = this.value" )>
+          <option value="MSFT">Microdoft</option>
+          <option value="FB">Facebook</option>
+          <option value=AAPL>Apple</option>
+          <option value="GOOGL">Google</option>
+        </select>
+      </div>
+      <div class="col-6 col-sm-3"><b>for period</b></div>
+
+      <div class="col-6 col-sm-3">
+        <select class="form-select" aria-label="Select" oninput="Period = this.value" )>
+          <option value="1d">1 day</option>
+          <option value="5d">5 days</option>
+          <option value="1mo">1 month</option>
+          <option value="3mo">3 months</option>
+          <option value="6mo">6 months</option>
+          <option value="1y">1 year</option>
+          <option value="2y">2 years</option>
+          <option value="5y">5 years</option>
+          <option value="10y">10 years</option>
+          <option value="ytd">Year to date</option>
+          <option value="max">Max</option>
+        </select>
+      </div>
+
+      <!-- Force next columns to break to new line -->
+      <div class="w-100" style="padding:10px"></div>
+
+      <div class="col-6 col-sm-3"><b>Stock info</b></div>
+      <div class="col-6 col-sm-9">
+        <h2 id="companyName"></h2>
+        <div id="chart" class="chart" style="border: 1px solid;padding:10px; 
+                    box-shadow: 2px 2px 2px #888888;)">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

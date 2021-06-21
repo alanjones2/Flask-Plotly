@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 
-    return render_template('index.html')
+    return render_template('index2.html')
 
 @app.route('/callback/<endpoint>')
 def cb(endpoint):   
@@ -41,7 +41,7 @@ def gm(stock):
     margin = range * 0.05
     max = max + margin
     min = min - margin
-    fig = px.area(df, x='Datetime', y="Open",
+    fig = px.area(df, x='Date-Time', y="Open",
         hover_data=("Open","Close","Volume"), 
         range_y=(min,max), template="seaborn" )
 
