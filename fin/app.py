@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 
-    return render_template('index2.html')
+    return render_template('index3.html')
 
 @app.route('/callback/<endpoint>')
 def cb(endpoint):   
@@ -21,7 +21,6 @@ def cb(endpoint):
     elif endpoint == "getInfo":
         stock = request.args.get('data')
         st = yf.Ticker(stock)
-        #print(st,st.info)
         return json.dumps(st.info)
     else:
         return "Bad endpoint", 400
@@ -34,7 +33,6 @@ def gm(stock,period, interval):
     df = st.history(period=(period), interval=interval)
     df=df.reset_index()
     df.columns = ['Date-Time']+list(df.columns[1:])
-    print(df.head())
     max = (df['Open'].max())
     min = (df['Open'].min())
     range = max - min
