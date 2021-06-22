@@ -11,9 +11,7 @@
     <title></title>
 
     <script>
-
         async function callback() {
-
             let Stock = document.getElementById('stock').value;
             let Period = document.getElementById('period').value;
             let Interval = document.getElementById('interval').value;
@@ -37,6 +35,12 @@
         function info(json) {
             let name = document.getElementById('companyName');
             name.innerHTML = json.shortName;
+            name = document.getElementById('symbol');
+            name.innerHTML = json.symbol;
+            name = document.getElementById('dayHigh');
+            name.innerHTML = json.dayHigh;
+            name = document.getElementById('dayLow');
+            name.innerHTML = json.dayLow;
         }
     </script>
 </head>
@@ -101,7 +105,13 @@
             <div class="w-100" style="padding:10px;text-align:right;font-size: small;"><i>Note: not all intervals are
                     valid for all periods</i></div>
 
-            <div class="col-3"><b>Stock info</b></div>
+            <div class="col-3"><p><b>Stock info</b></p>
+                <p>Symbol: <span id="symbol">N/A</span></p>
+                <p>Day High: <span id="dayHigh">N/A</span></p>
+                <p>Day Low: <span id="dayLow">N/A</span></p>
+
+                
+            </div>
             <div class="col-9">
                 <h2 id="companyName"></h2>
                 <div id="chart" class="chart" style="height: 300px;border: 1px solid; 
@@ -109,8 +119,11 @@
                 </div>
             </div>
             <div class="col-12" style="font-size:smaller;padding:10px;text-align: right;">
-                 <i>Data provided by <b>yfinance</b></i>
-            </div>
+                <i>The data is, to the best of our knowledge, correct but cannot be guarenteed to be so</i>
+                <br/>
+                <i>This site is for educational and demonstation purposes, only</i>
+           </div>    
+           
         </div>
 
     </div>
