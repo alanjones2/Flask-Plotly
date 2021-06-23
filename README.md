@@ -39,6 +39,7 @@ A slightly modified version of the code above can be found here:
 
 The yfinance library for Python gives you access to Yahoo Finance data and Plotly and Flask let you build a stunning dashboard. This article shows you how to create a simple finance web app.
 <br/>
+\
 <hr width="100%"/>
 
 
