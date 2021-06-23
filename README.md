@@ -2,7 +2,7 @@
 
 Why use Dash when Plotly plus Flask is easy and more flexible? Add a little bit of AJAX and you can add interactivity.
 
-This repo contains the code for the articles listed, below (see bottom of page).
+This repo contains the code for the articles listed, below.
 <hr/>
 
 ## Web Visualization with Plotly and Flask
