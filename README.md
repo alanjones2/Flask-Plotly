@@ -21,7 +21,7 @@ This article explores using Flask and Plotly as an alternative to using Dash whe
 ## An Interactive Web Dashboard with Plotly and Flask
 [[Article](https://towardsdatascience.com/an-interactive-web-dashboard-with-plotly-and-flask-c365cdec5e3f)] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/plotlycallback-gm)]
 
-<img width="50%" align="right" src="https://miro.medium.com/max/1273/1*lrkc5plidfgwhZlAeQ3dmw.png"/>
+<img width="60%" align="right" src="https://miro.medium.com/max/1273/1*lrkc5plidfgwhZlAeQ3dmw.png"/>
 
 
 This article shows how to create a truly interactive app as you might with Dash with callbacks but using Plotly and Flask and a bit of AJAX. The code for this is in 
@@ -34,16 +34,17 @@ A slightly modified version of the code above can be found here:
 ## How to Build a Stocker Tracker with Plotly and Flask
 [[Article]()] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/fin)]
 
-<img width="50%" align="right" src="https://cdn-images-1.medium.com/max/800/1*qhJckkB5tgppH0TY5XVrvQ.png"/>
 
+<img width="50%" src="https://cdn-images-1.medium.com/max/800/1*qhJckkB5tgppH0TY5XVrvQ.png"/>
 
 The yfinance library for Python gives you access to Yahoo Finance data and Plotly and Flask let you build a stunning dashboard. This article shows you how to create a simple finance web app.
-<br/>
-\
+
+
+
 <hr width="100%"/>
 
 
-# To get all of the code either clone this repo or [download the zip file](https://github.com/alanjones2/Flask-Plotly/archive/refs/heads/main.zip)
+## To get all of the code either clone this repo or [download the zip file](https://github.com/alanjones2/Flask-Plotly/archive/refs/heads/main.zip)
 
 <hr/>
 
