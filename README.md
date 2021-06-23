@@ -1,9 +1,13 @@
 # Web Visualization with Plotly, Flask and Ajax - FlaPjax
 
+<img width="30%" align="right" src="https://cdn-images-1.medium.com/max/800/1*qhJckkB5tgppH0TY5XVrvQ.png"/>
+
+<br/>
 Why use Dash when Plotly plus Flask is easy and more flexible? Add a little bit of AJAX and you can add interactivity.
 
 This repo contains the code for the articles listed, below.
-<hr/>
+
+<hr width="100%"/>
 
 ## Web Visualization with Plotly and Flask
 [[Article](https://towardsdatascience.com/web-visualization-with-plotly-and-flask-3660abf9c946)] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/plotly)]
