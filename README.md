@@ -36,9 +36,10 @@ A slightly modified version of the code above can be found here:
 
 <img width="50%" align="right" src="https://cdn-images-1.medium.com/max/800/1*qhJckkB5tgppH0TY5XVrvQ.png"/>
 
-<br/>
+
 The yfinance library for Python gives you access to Yahoo Finance data and Plotly and Flask let you build a stunning dashboard. This article shows you how to create a simple finance web app.
   
+<hr width="100%"/>
 <hr width="100%"/>
 
 ### To get all of the code either clone this repo or [download the zip file](https://github.com/alanjones2/Flask-Plotly/archive/refs/heads/main.zip)
