@@ -44,7 +44,7 @@ The yfinance library for Python gives you access to Yahoo Finance data and Plotl
 <hr width="100%"/>
 
 
-## To get all of the code either clone this repo or [download the zip file](https://github.com/alanjones2/Flask-Plotly/archive/refs/heads/main.zip)
+### To get all of the code either clone this repo or [download the zip file](https://github.com/alanjones2/Flask-Plotly/archive/refs/heads/main.zip)
 
 <hr/>
 
