@@ -18,6 +18,13 @@ This article shows how to create a truly interactive app as you might with Dash 
 A slightly modified version of the code above can be found here:
 [plotlycallback-gm2](https://github.com/alanjones2/Flask-Plotly/tree/main/plotlycallback-gm2). In this version no parameters are passed to the template and the chart is always loaded using Ajax. It also has the benefit of labelling the chart! 
 
+## How to Build a Stocker Tracker with Plotly and Flask
+[[Article]()] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/fin)]
+
+![A finance web app](https://cdn-images-1.medium.com/max/800/1*qhJckkB5tgppH0TY5XVrvQ.png "A simple finance app")
+
+
+The yfinance library for Python give you acces to Yahoo Finance data and Plotly and flask let you build a stunning dashboard. This article shows you how to create a simple finance web app.
 
 <hr/>
 
