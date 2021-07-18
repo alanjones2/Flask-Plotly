@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Fetch the Weather</title>
+    <script>
+        async function fetchweather(city) {
+            let response = await fetch("/fetchweather?city=" + city);
+            if (response.ok) {
+                let weatherJson = await response.json();
+                //Set the title etc.
+                document.getElementById("feedTitle").innerText = weatherJson.feed.title;
+                document.getElementById("feedSubTitle").innerText = weatherJson.feed.subtitle;
+                document.getElementById("feedImage").src = weatherJson.feed.image.href;
+            } else {
+                alert("HTTP-Error: " + response.status);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Fetch the weather</h1>
+
+    <img id="feedImage" src="{{weatherData.feed.image.href}}" />
+
+    <h3 id="feedTitle">{{weatherData.feed.title}}</h3>
+    <p id="feedSubTitle">{{weatherData.feed.subtitle}}</p>
+
+
+    <div><b>Select new city</b></div>
+
+    <select id="city" onchange="fetchweather(this.value)">
+        <option value="2643743">London</option>
+        <option value="5128581">New York</option>
+        <option value="2988507">Paris</option>
+        <option value="1850147">Tokyo</option>
+    </select>
+</body>
+
+</html>

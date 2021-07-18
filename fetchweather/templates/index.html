@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Fetch the Weather</title>
+
+    <script>
+        async function fetchweather(city) {
+            let response = await fetch("/fetchweather?city="+city);
+            if (response.ok) {
+                let weatherJson = await response.json();
+                //Set the title etc.
+                document.getElementById("feedTitle").innerText=weatherJson.feed.title;
+                document.getElementById("feedSubTitle").innerText=weatherJson.feed.subtitle;
+                document.getElementById("feedImage").src=weatherJson.feed.image.href;
+                
+                // Set the three days forecast
+                document.getElementById("day0").innerText=weatherJson.forecast[0].title;
+                document.getElementById("summary0").innerText=weatherJson.forecast[0].summary;
+                document.getElementById("day1").innerText=weatherJson.forecast[1].title;
+                document.getElementById("summary1").innerText=weatherJson.forecast[1].summary;
+                document.getElementById("day2").innerText=weatherJson.forecast[2].title;
+                document.getElementById("summary2").innerText=weatherJson.forecast[2].summary;
+
+            } else {
+                alert("HTTP-Error: " + response.status);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col text-light bg-secondary" style="margin:20px 0px 20px 0px">
+                <h1 style="padding:20px 0px 20px 0px">Fetch the weather</h1>
+            </div>
+
+        </div>
+        <div class="row" style="padding:20px 0px 20px 0px">
+            <p class="col-1"><img id="feedImage" src="{{weatherData.feed.image.href}}" /></p>
+            <div class="col">
+                <h3  class="text-primary" id="feedTitle">{{weatherData.feed.title}}</h3>
+                <p class="text-secondary" id="feedSubTitle">{{weatherData.feed.subtitle}}</p>
+            </div>
+            <div class="col-1 text-secondary"><b>Select new city</b></div>
+            <div class="col-2">
+                <select id="city" class="form-select" aria-label="Select" onchange="fetchweather(this.value)">
+                    <option selected value="2643743">London</option>
+                    <option value="5128581">New York</option>
+                    <option value="2988507">Paris</option>
+                    <option value="1850147">Tokyo</option>
+                </select>
+            </div>
+           
+
+            <hr />
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <h4 id="day0" class="text-primary">{{weatherData.forecast[0].title}}</h4>
+                <div id="summary0" class="text-secondary"> {{weatherData.forecast[0].summary}}</div>
+            </div>
+            <div class="col-4">
+                <h4 id="day1" class="text-primary">{{weatherData.forecast[1].title}}</h4>
+                <div id="summary1" class="text-secondary"> {{weatherData.forecast[1].summary}}</div>
+            </div>
+            <div class="col-4">
+                <h4 id="day2" class="text-primary">{{weatherData.forecast[2].title}}</h4>
+                <div id="summary2" class="text-secondary"> {{weatherData.forecast[2].summary}}</div>
+            </div>
+        </div>
+        <div class="row text-info" style="font-size:smaller;padding:10px;text-align: right;">
+            <i>{{weatherData.feed.rights}}</i>
+            <br />
+            <i>This site is for educational and demonstation purposes, only</i>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
