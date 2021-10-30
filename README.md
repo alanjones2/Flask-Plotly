@@ -32,8 +32,8 @@ A slightly modified version of the code above can be found here:
 [plotlycallback-gm2](https://github.com/alanjones2/Flask-Plotly/tree/main/plotlycallback-gm2). In this version no parameters are passed to the template and the chart is always loaded using Ajax. It also has the benefit of labelling the chart! 
 <hr width="100%"/>
 
-## How to Build a Stocker Tracker with Plotly and Flask
-[[Article]()] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/fin)]
+## How to Build a Stock Tracker with Plotly and Flask
+[[Article](https://medium.datadriveninvestor.com/how-to-build-a-stocker-tracker-with-plotly-and-flask-8bf677f723af)] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/fin)]
 
 
 <img width="60%" align="right" src="https://cdn-images-1.medium.com/max/800/1*qhJckkB5tgppH0TY5XVrvQ.png"/>
