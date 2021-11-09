@@ -33,7 +33,7 @@ A slightly modified version of the code above can be found here:
 <hr width="100%"/>
 
 ## How to Build a Stock Tracker with Plotly and Flask
-[[Article](https://medium.datadriveninvestor.com/how-to-build-a-stocker-tracker-with-plotly-and-flask-8bf677f723af)] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/fin)]
+[[Article]()] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/fin)]
 
 
 <img width="60%" align="right" src="https://cdn-images-1.medium.com/max/800/1*qhJckkB5tgppH0TY5XVrvQ.png"/>
