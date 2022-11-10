@@ -7,6 +7,9 @@ Why use Dash when Plotly plus Flask is easy and more flexible? Add a little bit 
 
 This repo contains the code for the articles listed, below.
 
+If you find this content useful, please consider this... <br/><br/>
+<a href='https://ko-fi.com/M4M64THKG' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 <hr width="100%"/>
 
 ## Web Visualization with Plotly and Flask
@@ -16,6 +19,7 @@ This repo contains the code for the articles listed, below.
 
 
 This article explores using Flask and Plotly as an alternative to using Dash when creating Web apps. It compares a simple Dash app with a Flask/Plotly one and finds that the latter is easy and more flexible than it's Dash counterpart. You can find the code for the article in the [Plotly](https://github.com/alanjones2/Flask-Plotly/tree/main/plotly) folder.
+
 
 <hr width="100%"/>
 
@@ -33,7 +37,7 @@ A slightly modified version of the code above can be found here:
 <hr width="100%"/>
 
 ## How to Build a Stock Tracker with Plotly and Flask
-[[Article]()] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/fin)]
+[[Article](https://projectcodeed.blogspot.com/2021/07/how-to-build-stock-tracker-with-plotly.html)] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/fin)]
 
 
 <img width="60%" align="right" src="https://cdn-images-1.medium.com/max/800/1*qhJckkB5tgppH0TY5XVrvQ.png"/>
