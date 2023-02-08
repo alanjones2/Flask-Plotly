@@ -21,9 +21,9 @@
             if (response.ok) {
                 let chartJson = await response.json();
                 if (response.ok) {
-                    response = await fetch("/callback/getInfo?data=" + Stock);
-                    let infoJson = await response.json();
-                    info(infoJson);
+                    //response = await fetch("/callback/getInfo?data=" + Stock);
+                    //let infoJson = await response.json();
+                    //info(infoJson);
                     Plotly.newPlot('chart', chartJson, {});
                 } else {
                     alert("HTTP-Error: " + response.status + "on getInfo");
@@ -58,7 +58,7 @@
             <div class="col">
                 <select id="stock" class="form-select" aria-label="Select" )>
                     <option selected value="MSFT">Microsoft</option>
-                    <option value="FB">Facebook</option>
+                    <option value="META">Facebook</option>
                     <option value=AAPL>Apple</option>
                     <option value="GOOGL">Google</option>
                 </select>
@@ -106,6 +106,7 @@
                     valid for all periods</i></div>
 
             <div class="col-3"><p><b>Stock info</b></p>
+                <p>yFinance is not currently reliably retrieving this data, so it has been disabled for now.</p>
                 <p>Symbol: <span id="symbol">N/A</span></p>
                 <p>Day High: <span id="dayHigh">N/A</span></p>
                 <p>Day Low: <span id="dayLow">N/A</span></p>

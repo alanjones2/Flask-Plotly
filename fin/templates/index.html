@@ -13,17 +13,17 @@
                 let json = await response.json();
                 if (endpoint == "getStock") {
                     Plotly.newPlot('chart', json, {});
-                    response = await fetch("/callback/getInfo?data=" + data);
-                    json = await response.json();
-                    info(json);
+                    //response = await fetch("/callback/getInfo?data=" + data);
+                    //json = await response.json();
+                    //info(json);
                 }
             } else {
                 alert("HTTP-Error: " + response.status);
             }
         }
         function info(json) {
-            let name = document.getElementById('companyName');
-            name.innerHTML = json.shortName;
+            //let name = document.getElementById('companyName');
+            //name.innerHTML = json.shortName;
         }
         function buildList(options, listId) {
             var s = document.getElementById(listId);
