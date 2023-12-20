@@ -1,4 +1,4 @@
-# Web Visualization with Plotly, Flask and Ajax - FlaPjax
+# Web Visualization with Plotly, Flask and Ajax - Flapjax
 
 <img width="30%" align="right" src="https://cdn-images-1.medium.com/max/800/1*qhJckkB5tgppH0TY5XVrvQ.png"/>
 
