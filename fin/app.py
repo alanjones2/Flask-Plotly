@@ -45,5 +45,5 @@ def gm(stock,period, interval):
 
 
     # Create a JSON representation of the graph
-    graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+    graphJSON = fig.to_json() #json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     return graphJSON

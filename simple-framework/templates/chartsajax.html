@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function cb(selection) {
+            $.getJSON({
+                url: "/callback", data: { 'data': selection }, success: function (result) {
+                    Plotly.react('chart', result, {});;
+                }
+            });
+        }
+    </script>
+</head>
+
+<body style="font-family:arial, sans-serif">
+    <h1>GDP per Capita Over Time</h1>
+    <h2>Choose your country</h2>
+    <p>Make sure you spell it correctly with capital letter(s), e.g. United Kingdom</p>
+    <input type="text" id="fname" name="fname" onchange="cb(this.value)">
+    <div id="chart" class="chart"></div>
+    <div id="png_chart"></div>
+</body>
+
+<script>
+    cb("United Kingdom");
+</script>
+</html>
+

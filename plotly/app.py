@@ -14,5 +14,6 @@ def notdash():
       'City': ['SF', 'SF', 'SF', 'Montreal', 'Montreal', 'Montreal']
    })
    fig = px.bar(df, x='Fruit', y='Amount', color='City',    barmode='group')
-   graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+   #graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+   graphJSON = fig.to_json()
    return render_template('notdash.html', graphJSON=graphJSON)

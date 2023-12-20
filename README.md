@@ -12,6 +12,15 @@ If you find this content useful, please consider this... <br/><br/>
 
 <hr width="100%"/>
 
+## [Flapjax](https://github.com/alanjones2/flapjax_public)
+### An approach to Data visualisation with Flask, Python and Plotly
+
+This new(er) repo is a development from the one your are looking now. It attempts to develop an approach to using Flask and Plotly and supports the tutorials that will be linked there in the future.
+
+[Flapjax](https://github.com/alanjones2/flapjax_public)
+
+<hr width="100%"/>
+
 ## Web Visualization with Plotly and Flask
 [[Article](https://towardsdatascience.com/web-visualization-with-plotly-and-flask-3660abf9c946)] [[Code](https://github.com/alanjones2/Flask-Plotly/tree/main/plotly)]
 
